@@ -6,6 +6,8 @@ import { ProductComponent } from './product.component';
 import { CartItemDetailComponent } from './components/cart-item-detail/cart-item-detail.component';
 import { OrderListComponent } from './components/order-list/order-list.component';
 import { ProductCatalogComponent } from './components/product-catalog/product-catalog.component';
+import { MaterialModule } from '../material/material.module';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import { ProductCatalogComponent } from './components/product-catalog/product-ca
   ],
   imports: [
     CommonModule,
-    ProductRoutingModule
+    ProductRoutingModule,
+    MaterialModule,
+    FormsModule
   ]
 })
 export class ProductModule { }
