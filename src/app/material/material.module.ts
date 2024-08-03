@@ -8,16 +8,14 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
-import {MatTableModule} from '@angular/material/table'; 
+import { MatTableModule } from '@angular/material/table';
 import { MatMenuModule } from '@angular/material/menu';
-import {MatPaginator, MatPaginatorModule} from '@angular/material/paginator';
-import {MatCardModule} from '@angular/material/card'; 
+import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
+import { MatCardModule } from '@angular/material/card';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatDatepickerModule } from '@angular/material/datepicker';
-import {MatSelectModule} from '@angular/material/select'; 
-import {MatBadgeModule} from '@angular/material/badge'; 
-
-
+import { MatSelectModule } from '@angular/material/select';
+import { MatBadgeModule } from '@angular/material/badge';
 
 @NgModule({
   declarations: [],
@@ -40,7 +38,7 @@ import {MatBadgeModule} from '@angular/material/badge';
     MatDatepickerModule,
     MatNativeDateModule,
     MatSelectModule,
-    MatBadgeModule
+    MatBadgeModule,
   ],
   exports: [
     MatFormField,
@@ -60,7 +58,7 @@ import {MatBadgeModule} from '@angular/material/badge';
     MatDatepickerModule,
     MatNativeDateModule,
     MatSelectModule,
-    MatBadgeModule
-  ]
+    MatBadgeModule,
+  ],
 })
-export class MaterialModule { }
+export class MaterialModule {}
