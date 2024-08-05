@@ -60,28 +60,28 @@ export class CartItemDetailComponent implements OnInit {
     });
   }
 
-  // placeOrder(): void {
-  //   const order: Order = {
-  //     customerId: this.loginResponse!.user.id,
-  //     date: new Date().toISOString().split('T')[0],
-  //     cartItems: this.itemsInCart.map((item) => ({
-  //       productId: item.productId,
-  //       quantity: item.quantity,
-  //     })),
-  //     total: this.totalAmount,
-  //   };
+  placeOrder(): void {
+    const order: Order = {
+      customerId: this.loginResponse!.user.id,
+      date: new Date().toISOString().split('T')[0],
+      cartItems: this.itemsInCart.map((item) => ({
+        productId: item.productId,
+        quantity: item.quantity,
+      })),
+      total: this.totalAmount,
+    };
 
-  //   this.orderService.createOrder(order).subscribe({
-  //     next: () => {
-  //       this.showSnackBar('Pedido realizado con éxito');
-  //       this.cartService.clearCart();
-  //       this.router.navigate(['/orders']);
-  //     },
-  //     error: () => {
-  //       this.showSnackBar('Error en el registro. Por favor, intenta de nuevo.');
-  //     },
-  //   });
-  // }
+    this.orderService.createOrder(order).subscribe({
+      next: () => {
+        this.showSnackBar('Pedido realizado con éxito');
+        this.cartService.clearCart();
+        this.router.navigate(['/orders']);
+      },
+      error: () => {
+        this.showSnackBar('Error en el registro. Por favor, intenta de nuevo.');
+      },
+    });
+  }
 
   private showSnackBar(message: string): void {
     this.snackBar.open(message, 'Cerrar', {
